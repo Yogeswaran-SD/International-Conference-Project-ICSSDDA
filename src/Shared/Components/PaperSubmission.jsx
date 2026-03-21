@@ -3,12 +3,11 @@ import React from 'react'
 export default function PaperSubmission() {
   return (
     <>
-      <div className="bg-[url('/image/papersubmit.jpg')] h-[400px] relative">
-        {/* <div  className="bg-[#B2C7F6]/[25%] items-center absolute   " > */}
-        <div className='hanu-bold text-[48px] relative flex justify-center items-center h-full text-white  '>
-          <h1 className=''>Paper Submission</h1>
+      <div className="bg-[url('/image/papersubmit.jpg')] h-[400px] relative py-45">
+        <div className="hanu-bold text-[48px] flex justify-center items-center h-fit text-white relative  bg-[#B2C7F6]/[25%] w-fit mx-auto py-5 lg:px-40 px-15 leading-relaxed hanu-bold"
+            style={{ clipPath: 'polygon(10% 0, 100% 0, 90% 100%, 0 100%)' }}>
+          <h1>Paper Submission</h1>
         </div>
-        {/* </div> */}
       </div>
 
       {/* <section className="h-[300px] bg-center bg-cover relative" style={{ backgroundImage: "url('/images/servicepage/servicehero.png')" }}>

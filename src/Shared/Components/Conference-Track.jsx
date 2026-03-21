@@ -4,8 +4,9 @@ import React from 'react'
 export default function Conference() {
   return (
     <>
-     <div className="bg-[url('/image/papersubmit.jpg')] h-[400px] relative">
-        <div className="hanu-bold text-[48px] flex justify-center items-center h-full text-white relative" >
+       <div className="bg-[url('/image/papersubmit.jpg')] h-[400px] relative py-45">
+        <div className="hanu-bold text-[48px] flex justify-center items-center h-fit text-white relative  bg-[#B2C7F6]/[25%] w-fit mx-auto py-5 lg:px-40 px-15 leading-relaxed hanu-bold"
+            style={{ clipPath: 'polygon(10% 0, 100% 0, 90% 100%, 0 100%)' }}>
           <h1>Conference Tracks</h1>
         </div>
       </div>

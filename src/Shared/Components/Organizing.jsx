@@ -3,8 +3,9 @@ import React from "react";
 export default function Organizing() {
   return (
     <>
-      <div className="bg-[url('/image/papersubmit.jpg')] h-[400px] relative">
-        <div className="hanu-bold text-[48px] flex justify-center items-center h-full text-white relative">
+      <div className="bg-[url('/image/papersubmit.jpg')] h-[400px] relative py-45">
+        <div className="hanu-bold text-[48px] flex justify-center items-center h-fit text-white relative  bg-[#B2C7F6]/[25%] w-fit mx-auto py-5 lg:px-40 px-15 leading-relaxed hanu-bold"
+            style={{ clipPath: 'polygon(10% 0, 100% 0, 90% 100%, 0 100%)' }}>
           <h1>Organizing Committee</h1>
         </div>
       </div>
@@ -38,7 +39,7 @@ export default function Organizing() {
           </div>
           <div className="grid grid-cols-2 gap-8 ">
             <div>
-              <ul className="list-disc text-[16px] pop-medium space-y-2">
+              <ul className="list-disc list-inside text-[16px] pop-medium space-y-2">
                 <li>Planning and coordinating all aspects of the conference logistics and execution.</li>
                 <li>Curating technical sessions, panel discussions, and keynote presentations led by leading experts.</li>
                 <li>Managing the paper submission, peer-review, and acceptance process with academic integrity.</li>
@@ -48,7 +49,7 @@ export default function Organizing() {
               </ul>
             </div>
             <div>
-              <img src="/image/image 23.png" alt="Loading" />
+              <img src="/image/image 23.png" alt="Loading"  className='md:h-100 md:w-100 lg:h-100 lg:w-200 text-center items-center object-cover rounded-2xl'/>
             </div>
           </div>
         </div>
