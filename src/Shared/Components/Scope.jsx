@@ -51,9 +51,9 @@ export default function Scope() {
   return (
     <>
       {/* Hero Banner */}
-      <div className="bg-[url('/image/papersubmit.jpg')] h-[400px] relative py-45">
+      <div className="bg-[url('/image/papersubmit.jpg')] h-[200px] sm:h-[280px] lg:h-[400px] relative py-10 sm:py-20 lg:py-45">
         <div
-          className="hanu-bold text-[48px] flex justify-center items-center h-fit text-white relative bg-[#B2C7F6]/[25%] w-fit mx-auto py-5 lg:px-40 px-15 leading-relaxed"
+          className="hanu-bold text-[22px] sm:text-[34px] lg:text-[48px] flex justify-center items-center h-fit text-white relative bg-[#B2C7F6]/[25%] w-fit mx-auto py-3 sm:py-5 px-6 sm:px-15 lg:px-40 leading-relaxed"
           style={{ clipPath: "polygon(10% 0, 100% 0, 90% 100%, 0 100%)" }}
         >
           <h1>Scope of Our Conference</h1>
@@ -61,9 +61,9 @@ export default function Scope() {
       </div>
 
       {/* Main Content */}
-      <section className="max-w-full mx-[150px] lg:py-10 space-y-5">
+      <section className="max-w-full mx-4 sm:mx-8 md:mx-14 lg:mx-[150px] lg:py-10 space-y-5">
         <div>
-          <p className="pop-medium text-[18px]">
+          <p className="pop-medium text-[14px] sm:text-[16px] lg:text-[18px]">
             The{" "}
             <span className="text-[#093FB4]">
               International Conference on Software Systems Development and Data
@@ -77,23 +77,23 @@ export default function Scope() {
         </div>
 
         <div>
-          <p className="pop-medium text-[18px]">
+          <p className="pop-medium text-[14px] sm:text-[16px] lg:text-[18px]">
             The scope of the conference includes, but is not limited to, the
             following key areas:
           </p>
         </div>
 
         {/* Cards Grid */}
-        <div className="lg:py-10">
-          <div className="grid lg:grid-cols-2 gap-6">
+        <div className="py-5 lg:py-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {cards.map((card, index) => (
               <div
                 key={index}
                 className="border-2 border-[#093FB4] overflow-hidden"
-                style={{ minHeight: "400px" }}
+                style={{ minHeight: "350px" }}
               >
                 {/* Card Header — CSS chevron replicating Group 158.png design */}
-                <div className="relative w-full" style={{ height: "160px" }}>
+                <div className="relative w-full" style={{ height: "140px" }}>
                   {/* Shadow / lighter chevron behind (light blue layer) */}
                   <div
                     className="absolute inset-0 w-full h-full"
@@ -115,15 +115,15 @@ export default function Scope() {
                   />
                   {/* Title centred inside the blue area */}
                   <div className="relative z-10 flex items-center justify-center h-[70%] px-4">
-                    <h2 className="hanu-bold text-[22px] text-white text-center leading-snug">
+                    <h2 className="hanu-bold text-[16px] sm:text-[18px] lg:text-[22px] text-white text-center leading-snug">
                       {card.title}
                     </h2>
                   </div>
                 </div>
 
                 {/* Card Body */}
-                <div className="bg-white px-6 py-5">
-                  <ul className="text-[#093FB4] hanu-regular text-[16px] space-y-2">
+                <div className="bg-white px-4 sm:px-6 py-4 sm:py-5">
+                  <ul className="text-[#093FB4] hanu-regular text-[13px] sm:text-[15px] lg:text-[16px] space-y-2">
                     {card.items.map((item, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <span className="mt-1 text-[#093FB4] text-[10px]">
@@ -140,7 +140,7 @@ export default function Scope() {
         </div>
 
         {/* Footer paragraph */}
-        <div className="pop-medium text-[18px] lg:py-10 space-y-5">
+        <div className="pop-medium text-[14px] sm:text-[16px] lg:text-[18px] py-5 lg:py-10 space-y-5">
           <p>
             The conference aims to foster collaboration across disciplines,
             encourage the exchange of innovative ideas, and support the

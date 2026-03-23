@@ -3,22 +3,22 @@ import React from "react";
 export default function Organizing() {
   return (
     <>
-      <div className="bg-[url('/image/papersubmit.jpg')] h-[400px] relative py-45">
-        <div className="hanu-bold text-[48px] flex justify-center items-center h-fit text-white relative  bg-[#B2C7F6]/[25%] w-fit mx-auto py-5 lg:px-40 px-15 leading-relaxed hanu-bold"
+      <div className="bg-[url('/image/papersubmit.jpg')] h-[200px]  sm:h-[280px] lg:h-[400px] relative py-10  sm:py-20 lg:py-45">
+        <div className="hanu-bold text-[22px] sm:text-[34px] lg:text-[48px] flex justify-center items-center h-fit text-white relative bg-[#B2C7F6]/[25%] w-fit mx-auto py-3 sm:py-5 px-6 sm:px-15 lg:px-40 leading-relaxed hanu-bold"
             style={{ clipPath: 'polygon(10% 0, 100% 0, 90% 100%, 0 100%)' }}>
           <h1>Organizing Committee</h1>
         </div>
       </div>
 
-      <section className="max-w-full mx-[150px]">
-        <div className="lg:py-10 space-y-5">
-          <div className="hanu-bold text[30px] text-[#093FB4] text-[30px]">
+      <section className="max-w-full mx-4 sm:mx-8 md:mx-14 lg:mx-[150px]">
+        <div className="py-6 lg:py-10 space-y-5">
+          <div className="hanu-bold text-[22px] lg:text-[30px] text-[#093FB4]">
             <h2>Organizing Committee</h2>
           </div>
-          <div className="pop-medium text[16px]">
+          <div className="pop-medium text-[13px] sm:text-[16px]">
             <p>
-              The Organizing Committee of the International Conference on
-              Software Systems Development and Data Analysis consists of
+              The Organizing Committee of the International Conference on
+              Software Systems Development and Data Analysis consists of
               distinguished academicians, researchers, and industry experts
               committed to excellence in conference planning and execution. The
               committee plays a vital role in curating technical sessions,
@@ -32,14 +32,14 @@ export default function Organizing() {
         </div>
       </section>
 
-      <section className="max-w-full mx-[150px]">
-        <div className="space-y-5 lg:py-10">
-          <div className="hanu-bold text[30px] text-[#093FB4] text-[30px]">
-            <h2>It’s Rules and Responsiblities</h2>
+      <section className="max-w-full mx-4 sm:mx-8 md:mx-14 lg:mx-[150px]">
+        <div className="space-y-5 py-6 lg:py-10">
+          <div className="hanu-bold text-[22px] lg:text-[30px] text-[#093FB4]">
+            <h2>It's Rules and Responsiblities</h2>
           </div>
-          <div className="grid grid-cols-2 gap-8 ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
-              <ul className="list-disc list-inside text-[16px] pop-medium space-y-2">
+              <ul className="list-disc list-inside text-[13px] sm:text-[16px] pop-medium space-y-2">
                 <li>Planning and coordinating all aspects of the conference logistics and execution.</li>
                 <li>Curating technical sessions, panel discussions, and keynote presentations led by leading experts.</li>
                 <li>Managing the paper submission, peer-review, and acceptance process with academic integrity.</li>
@@ -49,12 +49,11 @@ export default function Organizing() {
               </ul>
             </div>
             <div>
-              <img src="/image/image 23.png" alt="Loading"  className='md:h-100 md:w-100 lg:h-100 lg:w-200 text-center items-center object-cover rounded-2xl'/>
+              <img src="/image/image 23.png" alt="Loading" className='w-full max-h-[300px] lg:h-100 lg:w-200 text-center items-center object-cover rounded-2xl'/>
             </div>
           </div>
         </div>
       </section>
-      
     </>
   );
 }

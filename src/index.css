@@ -7,6 +7,14 @@
 @import url('/node_modules/preline/dts-config.js');
 @import url('/node_modules/preline/preline.d.ts');
 
+html {
+    zoom: 0.82;
+}
+
+body {
+    overflow-x: hidden;
+}
+
 /* Plugins */
 /* @import "@tailwindcss/forms"; */
 
