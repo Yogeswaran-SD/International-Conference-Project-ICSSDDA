@@ -32,17 +32,17 @@ export default function EditorialBoard() {
           </div>
           <div className='space-y-1'>
             <h3 className='k2d-bold text-[22px] text-[#093FB4] '>Managing the Peer Review Process</h3>
-            <p className='pop-medium text-[16px] mb-5'>Assign submitted papers to qualified reviewers and ensure fair, unbiased, and timely evaluations.</p>
+            <p className='pop-medium text-[16px] mb-5'>- Assign submitted papers to qualified reviewers and ensure fair, unbiased, and timely evaluations.</p>
             <h3 className='k2d-bold text-[22px] text-[#093FB4] '>Ensuring Quality of Submissions</h3>
-            <p className='pop-medium text-[16px] mb-5'>Review and select papers based on originality, relevance, clarity, and contribution to the field.</p>
+            <p className='pop-medium text-[16px] mb-5'>- Review and select papers based on originality, relevance, clarity, and contribution to the field.</p>
             <h3 className='k2d-bold text-[22px] text-[#093FB4] '>Providing Editorial Guidance</h3>
-            <p className='pop-medium text-[16px] mb-5'>Help shape the content and structure of the conference proceedings and ensure they meet publication standards</p>
+            <p className='pop-medium text-[16px] mb-5'>- Help shape the content and structure of the conference proceedings and ensure they meet publication standards</p>
             <h3 className='k2d-bold text-[22px] text-[#093FB4] '>Upholding Ethical Standards</h3>
-            <p className='pop-medium text-[16px] mb-5'>Ensure all submissions comply with academic integrity policies, including originality and proper citation.</p>
+            <p className='pop-medium text-[16px] mb-5'>- Ensure all submissions comply with academic integrity policies, including originality and proper citation.</p>
             <h3 className='k2d-bold text-[22px] text-[#093FB4] '>Advising on Key Topics</h3>
-            <p className='pop-medium text-[16px] mb-5'>Offer expert input on relevant themes and emerging trends in software systems development and data analysis.</p>
+            <p className='pop-medium text-[16px] mb-5'>- Offer expert input on relevant themes and emerging trends in software systems development and data analysis.</p>
             <h3 className='k2d-bold text-[22px] text-[#093FB4] '>Supporting Publication</h3>
-            <p className='pop-medium text-[16px] mb-5'> Work with the publication chair to prepare and finalize selected papers for inclusion in the conference proceedings or journal special issues.</p>
+            <p className='pop-medium text-[16px] mb-5'>- Work with the publication chair to prepare and finalize selected papers for inclusion in the conference proceedings or journal special issues.</p>
           </div>
         </div>
 

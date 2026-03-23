@@ -18,7 +18,8 @@ applications in the fields of artificial intelligence and smart technologies. Th
 the future of innovation.</p>
         </div>
         <div className='space-x-5'>
-        <div className='lg:py-10 space-y-5 text-center align-center border-[3px]  border-[#093FB4] border-space-x-5'>
+        <div className=' border-[3px]  border-[#093FB4] border-space-x-5'>
+          <div className='max-w-[85rem]  mx-auto lg:py-10 space-y-5 text-center align-center  '>
           <div>
             <h2 className='hanu-bold text-[30px] text-[#093FB4]'> Software Systems Architecture and Engineering</h2>
             <p className='pop-medium text-[22px]'>Focuses on modern approaches to software system design, including architectural styles, modeling practices, 
@@ -60,6 +61,7 @@ productivity and product quality.</p>
           <div>
             <h2 className='hanu-bold text-[30px] text-[#093FB4]'>Smart Systems, IoT, and Industry 4.0</h2>
             <p className='pop-medium text-[22px]'>Explores software solutions in the context of smart environments, automation, and interconnected systems.</p>
+          </div>
           </div>
         </div>
         </div>

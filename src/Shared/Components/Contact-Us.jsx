@@ -30,7 +30,7 @@ phone, or through the official conference website. Prompt support and guidance w
         </div>
 
         <section className='max-w-5xl mx-auto'>
-          <form action=""  className='bg-[#B2C7F6] rounded-[20%] '>
+          <form action=""  className='bg-[#B2C7F6] rounded-[15%] '>
           <div> <h2 className='hanu-bold text-[38px] text-[#093FB4] text-center lg:py-10'>If you have any questions, please contact us!</h2></div>
           <div className='max-w-full mx-20 '>
              <div className='grid grid-cols-3 gap-2'>
