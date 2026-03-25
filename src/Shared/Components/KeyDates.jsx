@@ -2,23 +2,22 @@ import React from "react";
 
 const dates = [
   { label: "Abstract Submission Deadline:", date: "June 10, 2025" },
-  { label: "Full Paper Submission Deadline:", date: "June 10, 2025" },
-  { label: "Notification of Acceptance:", date: "June 10, 2025" },
-  { label: "Final Paper Submission:", date: "June 10, 2025" },
-  { label: "Registration Deadline:", date: "June 10, 2025" },
-  { label: "Conference Dates:", date: "June 10, 2025" },
+  { label: "Full Paper Submission Deadline:", date: "July 16, 2025" },
+  { label: "Notification of Acceptance:", date: "August 1, 2025" },
+  { label: "Final Paper Submission:", date: "August 15, 2025" },
+  { label: "Registration Deadline:", date: "September 1, 2025" },
+  { label: "Conference Dates:", date: "November 15-17, 2025" },
 ];
 
 export default function KeyDates() {
   return (
     <>
       {/* Hero Banner */}
-      <div className="bg-[url('/image/papersubmit.jpg')] h-[200px] sm:h-[280px] lg:h-[400px] relative py-10 sm:py-20 lg:py-45">
-        <div
-          className="hanu-bold text-[22px] sm:text-[34px] lg:text-[48px] flex justify-center items-center h-fit text-white relative bg-[#B2C7F6]/[25%] w-fit mx-auto py-3 sm:py-5 px-6 sm:px-15 lg:px-40 leading-relaxed hanu-bold"
-          style={{ clipPath: "polygon(10% 0, 100% 0, 90% 100%, 0 100%)" }}
-        >
-          <h1>Important Dates</h1>
+     
+      <div className="bg-[url('/image/papersubmit.jpg')] bg-cover bg-center min-h-[250px] md:h-[350px] lg:h-[400px] relative py-10 md:py-20 lg:py-45 flex items-center">
+        <div className="hanu-bold text-xl md:text-3xl lg:text-[48px] flex justify-center items-center h-fit text-white relative bg-[#B2C7F6]/[25%] w-fit mx-auto py-4 md:py-5 lg:py-6 px-6 md:px-20 lg:px-40 leading-relaxed backdrop-blur-sm"
+            style={{ clipPath: 'polygon(10% 0, 100% 0, 90% 100%, 0 100%)' }}>
+          <h1 className="text-base md:text-2xl lg:text-5xl">Important Dates</h1>
         </div>
       </div>
 

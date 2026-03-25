@@ -1,12 +1,67 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { sendPaperSubmissionEmail } from '../../services/emailService'
 
 export default function PaperSubmission() {
+  const [formData, setFormData] = useState({
+    title: '',
+    institute: '',
+    author: '',
+    email: '',
+    category: '',
+    file: null
+  });
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState({ type: '', text: '' });
+
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleFileChange = (e) => {
+    setFormData(prev => ({
+      ...prev,
+      file: e.target.files[0]
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setMessage({ type: '', text: '' });
+
+    if (!formData.title || !formData.institute || !formData.author || !formData.email || !formData.category || !formData.file) {
+      setMessage({ type: 'error', text: 'Please fill in all fields' });
+      setLoading(false);
+      return;
+    }
+
+    const result = await sendPaperSubmissionEmail(formData);
+    setMessage({ type: result.success ? 'success' : 'error', text: result.message });
+    
+    if (result.success) {
+      setFormData({
+        title: '',
+        institute: '',
+        author: '',
+        email: '',
+        category: '',
+        file: null
+      });
+    }
+    setLoading(false);
+  };
+
   return (
     <>
-      <div className="bg-[url('/image/papersubmit.jpg')] h-[200px] sm:h-[280px] lg:h-[400px] relative py-10 sm:py-20 lg:py-45">
-        <div className="hanu-bold text-[22px] sm:text-[34px] lg:text-[48px] flex justify-center items-center h-fit text-white relative bg-[#B2C7F6]/[25%] w-fit mx-auto py-3 sm:py-5 px-6 sm:px-15 lg:px-40 leading-relaxed hanu-bold"
+   
+      <div className="bg-[url('/image/papersubmit.jpg')] bg-cover bg-center min-h-[250px] md:h-[350px] lg:h-[400px] relative py-10 md:py-20 lg:py-45 flex items-center">
+        <div className="hanu-bold text-xl md:text-3xl lg:text-[48px] flex justify-center items-center h-fit text-white relative bg-[#B2C7F6]/[25%] w-fit mx-auto py-4 md:py-5 lg:py-6 px-6 md:px-20 lg:px-40 leading-relaxed backdrop-blur-sm"
             style={{ clipPath: 'polygon(10% 0, 100% 0, 90% 100%, 0 100%)' }}>
-          <h1>Paper Submission</h1>
+          <h1 className="text-base md:text-2xl lg:text-5xl">Paper Submission</h1>
         </div>
       </div>
 
@@ -44,8 +99,17 @@ export default function PaperSubmission() {
       </section>
 
       <section className='max-w-4xl mx-auto px-4 sm:px-0'>
-        <form action="" className='bg-[#093FB4] rounded-[8%] sm:rounded-[8%]'>
+        <form onSubmit={handleSubmit} className='bg-[#093FB4] rounded-[8%] sm:rounded-[8%]'>
           <div className='text-[24px] sm:text-[32px] lg:text-[38px] hanu-bold text-white text-center py-5 mt-10'><h1>Submit Your Paper</h1></div>
+          
+          {message.text && (
+            <div className={`mx-4 sm:mx-10 mt-5 p-4 rounded-lg text-center font-semibold ${
+              message.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+            }`}>
+              {message.text}
+            </div>
+          )}
+
           <div className='max-w-full mx-4 sm:mx-10 mt-5'>
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-2'>
               <div className='flex flex-col gap-4 sm:gap-9'>
@@ -56,21 +120,23 @@ export default function PaperSubmission() {
                 <label htmlFor="category" className='text-white pop-regular text-[14px] sm:text-[16px]'>Paper Category</label>
               </div>
               <div className='space-y-[14px] sm:space-y-[18px] col-span-2'>
-                <input type="text" id='title' className='bg-[#B2C7F6] text-[14px] sm:text-[16px] pop-regular rounded-full w-full px-5 py-2' placeholder='Enter Your Paper Title' required />
-                <input type="text" id='institute' className='bg-[#B2C7F6] text-[14px] sm:text-[16px] pop-regular rounded-full w-full px-5 py-2' placeholder='Enter Your Institution Name' required />
-                <input type="text" id='author' className='bg-[#B2C7F6] text-[14px] sm:text-[16px] pop-regular rounded-full w-full px-5 py-2' placeholder="Enter Author's Full Name " required />
-                <input type="email" id='email' className='bg-[#B2C7F6] text-[14px] sm:text-[16px] pop-regular rounded-full w-full px-5 py-2' placeholder="Enter Author's Email" required />
-                <input type="text" id='category' className='bg-[#B2C7F6] text-[14px] sm:text-[16px] pop-regular rounded-full w-full px-5 py-2' placeholder='Enter Your Paper Category' required />
+                <input type="text" id='title' value={formData.title} onChange={handleInputChange} className='bg-[#B2C7F6] text-[14px] sm:text-[16px] pop-regular rounded-full w-full px-5 py-2' placeholder='Enter Your Paper Title' required />
+                <input type="text" id='institute' value={formData.institute} onChange={handleInputChange} className='bg-[#B2C7F6] text-[14px] sm:text-[16px] pop-regular rounded-full w-full px-5 py-2' placeholder='Enter Your Institution Name' required />
+                <input type="text" id='author' value={formData.author} onChange={handleInputChange} className='bg-[#B2C7F6] text-[14px] sm:text-[16px] pop-regular rounded-full w-full px-5 py-2' placeholder="Enter Author's Full Name " required />
+                <input type="email" id='email' value={formData.email} onChange={handleInputChange} className='bg-[#B2C7F6] text-[14px] sm:text-[16px] pop-regular rounded-full w-full px-5 py-2' placeholder="Enter Author's Email" required />
+                <input type="text" id='category' value={formData.category} onChange={handleInputChange} className='bg-[#B2C7F6] text-[14px] sm:text-[16px] pop-regular rounded-full w-full px-5 py-2' placeholder='Enter Your Paper Category' required />
               </div>
             </div>
             <div className='space-y-5 sm:space-y-10 pt-4 sm:pt-5'>
               <label htmlFor="file" className='text-white pop-regular text-[14px] sm:text-[16px]'>Upload Paper</label><br />
-              <input type="file" id='file' className='bg-[#B2C7F6] px-5 sm:px-75 pop-regular rounded-lg w-full text-white h-32 sm:h-40 hanu-bold' placeholder=' ' required />
+              <input type="file" id='file' onChange={handleFileChange} className='bg-[#B2C7F6] px-5 sm:px-75 pop-regular rounded-lg w-full text-white h-32 sm:h-40 hanu-bold' placeholder=' ' required />
             </div>
           </div>
           <div className='py-5 text-center'>
-            <button type='submit' className='bg-white px-5 py-1 rounded-3xl text-[#093FB4] k2d-bold text-[22px] sm:text-[30px]'>
-              Submit
+            <button type='submit' disabled={loading} className={`px-5 py-1 rounded-3xl k2d-bold text-[22px] sm:text-[30px] ${
+              loading ? 'bg-gray-400 text-gray-700 cursor-not-allowed' : 'bg-white text-[#093FB4] hover:bg-gray-100'
+            }`}>
+              {loading ? 'Submitting...' : 'Submit'}
             </button>
           </div>
         </form>

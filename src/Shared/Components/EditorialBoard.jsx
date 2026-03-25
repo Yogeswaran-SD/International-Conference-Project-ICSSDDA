@@ -3,12 +3,14 @@ import React from 'react'
 export default function EditorialBoard() {
   return (
     <>
-      <div className="bg-[url('/image/papersubmit.jpg')] h-[200px] sm:h-[280px] lg:h-[400px] relative py-10 sm:py-20 lg:py-45">
-        <div className="hanu-bold text-[22px] sm:text-[34px] lg:text-[48px] flex justify-center items-center h-fit text-white relative bg-[#B2C7F6]/[25%] w-fit mx-auto py-3 sm:py-5 px-6 sm:px-15 lg:px-40 leading-relaxed hanu-bold"
+ 
+       <div className="bg-[url('/image/papersubmit.jpg')] bg-cover bg-center min-h-[250px] md:h-[350px] lg:h-[400px] relative py-10 md:py-20 lg:py-45 flex items-center">
+        <div className="hanu-bold text-xl md:text-3xl lg:text-[48px] flex justify-center items-center h-fit text-white relative bg-[#B2C7F6]/[25%] w-fit mx-auto py-4 md:py-5 lg:py-6 px-6 md:px-20 lg:px-40 leading-relaxed backdrop-blur-sm"
             style={{ clipPath: 'polygon(10% 0, 100% 0, 90% 100%, 0 100%)' }}>
-          <h1>Editorial Board</h1>
+          <h1 className="text-base md:text-2xl lg:text-5xl">Editorial Board</h1>
         </div>
       </div>
+
 
       <section className='max-w-full mx-4 sm:mx-8 md:mx-14 lg:mx-[150px]'>
 
@@ -56,37 +58,37 @@ export default function EditorialBoard() {
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-10 gap-5'>
 
           <div className="bg-[url('/image/Editorial-Board.png')] bg-no-repeat text-center">
-            <h2 className='k2d-bold text-[20px] sm:text-[25px] text-[#093FB4] pl-5'>Dr. Md. Foysal</h2>
+            <h2 className='k2d-bold text-[20px] sm:text-[25px] text-[#093FB4] pl-5'>Dr. Sd.Yogi</h2>
             <p className='pop-medium text-[14px] sm:text-[16px] pl-5'>Department of Computer Science</p>
             <p className='pop-medium text-[14px] sm:text-[16px] pl-5'>University of Diponegoro</p>
             <p className='pop-medium text-[14px] sm:text-[16px] pl-5'>Indonesia</p>
           </div>
           <div className="bg-[url('/image/Editorial-Board.png')] bg-no-repeat text-center pt-1">
-            <h2 className='k2d-bold text-[20px] sm:text-[25px] text-[#093FB4]'>Dr. Md. Foysal</h2>
+            <h2 className='k2d-bold text-[20px] sm:text-[25px] text-[#093FB4]'>Dr. Sd.Yogi</h2>
             <p className='pop-medium text-[14px] sm:text-[16px]'>Department of Computer Science</p>
             <p className='pop-medium text-[14px] sm:text-[16px]'>University of Diponegoro</p>
             <p className='pop-medium text-[14px] sm:text-[16px]'>Indonesia</p>
           </div>
           <div className="bg-[url('/image/Editorial-Board.png')] bg-no-repeat text-center pt-1">
-            <h2 className='k2d-bold text-[20px] sm:text-[25px] text-[#093FB4]'>Dr. Md. Foysal</h2>
+            <h2 className='k2d-bold text-[20px] sm:text-[25px] text-[#093FB4]'>Dr. Sd.Yogi</h2>
             <p className='pop-medium text-[14px] sm:text-[16px]'>Department of Computer Science</p>
             <p className='pop-medium text-[14px] sm:text-[16px]'>University of Diponegoro</p>
             <p className='pop-medium text-[14px] sm:text-[16px]'>Indonesia</p>
           </div>
           <div className="bg-[url('/image/Editorial-Board.png')] bg-no-repeat text-center pt-1">
-            <h2 className='k2d-bold text-[20px] sm:text-[25px] text-[#093FB4]'>Dr. Md. Foysal</h2>
+            <h2 className='k2d-bold text-[20px] sm:text-[25px] text-[#093FB4]'>Dr. Y.Kiruthiga</h2>
             <p className='pop-medium text-[14px] sm:text-[16px]'>Department of Computer Science</p>
             <p className='pop-medium text-[14px] sm:text-[16px]'>University of Diponegoro</p>
             <p className='pop-medium text-[14px] sm:text-[16px]'>Indonesia</p>
           </div>
           <div className="bg-[url('/image/Editorial-Board.png')] bg-no-repeat text-center pt-1">
-            <h2 className='k2d-bold text-[20px] sm:text-[25px] text-[#093FB4]'>Dr. Md. Foysal</h2>
+            <h2 className='k2d-bold text-[20px] sm:text-[25px] text-[#093FB4]'>Dr. Y.Kiruthiga</h2>
             <p className='pop-medium text-[14px] sm:text-[16px]'>Department of Computer Science</p>
             <p className='pop-medium text-[14px] sm:text-[16px]'>University of Diponegoro</p>
             <p className='pop-medium text-[14px] sm:text-[16px]'>Indonesia</p>
           </div>
           <div className="bg-[url('/image/Editorial-Board.png')] bg-no-repeat text-center pt-1">
-            <h2 className='k2d-bold text-[20px] sm:text-[25px] text-[#093FB4]'>Dr. Md. Foysal</h2>
+            <h2 className='k2d-bold text-[20px] sm:text-[25px] text-[#093FB4]'>Dr. Y.Kiruthiga</h2>
             <p className='pop-medium text-[14px] sm:text-[16px]'>Department of Computer Science</p>
             <p className='pop-medium text-[14px] sm:text-[16px]'>University of Diponegoro</p>
             <p className='pop-medium text-[14px] sm:text-[16px]'>Indonesia</p>
